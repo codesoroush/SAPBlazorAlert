@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SAPBlazorAlertDemo", "SAPBlazorAlertDemo\SAPBlazorAlertDemo.csproj", "{B95367C5-ABC3-4245-8E8F-3BF8E8DCBEB8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SAPBlazorAlert", "SAPBlazorAlert\SAPBlazorAlert.csproj", "{3923DBA7-3689-47F1-A889-70EABB34E83D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A2909510-407D-41B0-9258-948A20609D58}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B95367C5-ABC3-4245-8E8F-3BF8E8DCBEB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B95367C5-ABC3-4245-8E8F-3BF8E8DCBEB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B95367C5-ABC3-4245-8E8F-3BF8E8DCBEB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B95367C5-ABC3-4245-8E8F-3BF8E8DCBEB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3923DBA7-3689-47F1-A889-70EABB34E83D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3923DBA7-3689-47F1-A889-70EABB34E83D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3923DBA7-3689-47F1-A889-70EABB34E83D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3923DBA7-3689-47F1-A889-70EABB34E83D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81A9F09E-DD69-49BE-8B20-C9A77997803C}
+	EndGlobalSection
+EndGlobal

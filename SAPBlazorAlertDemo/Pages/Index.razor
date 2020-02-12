@@ -1,0 +1,151 @@
+﻿@page "/"
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<br />
+
+
+<SAPToastArea 
+              
+              @ref="ToastArea"
+              ToastAreatPosition="@SAPToastAreatPosition.Right"
+              SAPToastDirection="SAPToastDirection.Column"
+              AnimationType="@AnimateBook.Specials.JackInTheBox"
+              
+              
+              >
+</SAPToastArea>
+
+<button class="btn btn-info" @onclick="() => this.Alert1.ShowAlert()">
+    show alert 1
+</button>
+
+
+<button class="btn btn-primary" @onclick="() => this.Alert2.ShowAlert()">
+    show alert with auto close
+</button>
+
+
+<button class="btn btn-warning" @onclick="() => this.Alert3.ShowAlert()">
+    show alert with auto close (user cant close alert)
+</button>
+<br />
+<br />
+<br />
+
+
+<button class="btn btn-primary" @onclick="CreateToast">
+    Create info toast
+</button>
+<button class="btn btn-success" @onclick="CreateToast2">
+    Create success toast
+</button>
+<button class="btn btn-danger" @onclick="CreateToast3">
+    Create danger toast
+</button>
+<SAPAlertBox @ref="Alert1"
+             AlertBoxSize="SAPAlertBoxSize.Small"
+             FooterText="created by SOROUSH ASADI"
+             SAPAlertType="@SAPAlertType.Info"
+             AnimationType="@AnimateBook.ZoomEntrances.ZoomIn.Fast()"
+             Title="Normal Alert">
+    <p>
+
+        you can set your alert body here ,
+        you can add buttons , or tables and any data u want.
+
+        below you can add any action and event u want
+    </p>
+    <button @onclick="() => this.Alert1.HideAlert()" class="btn btn-info">
+        Ok , i got it
+    </button>
+
+</SAPAlertBox>
+
+
+
+
+
+<SAPAlertBox @ref="Alert2"
+             AlertBoxSize="SAPAlertBoxSize.Small"
+             FooterText="created by SOROUSH ASADI"
+             SAPAlertType="SAPAlertType.Success"
+             AutoCloseDelay="TimeSpan.FromSeconds(4)"
+             AnimationType="@AnimateBook.ZoomEntrances.ZoomIn.Fast()"
+             Title="Auto Close Alert">
+    <p>
+
+        Yeeeey i'll close in 4 sec
+    </p>
+
+
+</SAPAlertBox>
+
+
+
+<SAPAlertBox @ref="Alert3"
+             AlertBoxSize="SAPAlertBoxSize.Small"
+             FooterText="created by SOROUSH ASADI"
+             SAPAlertType="SAPAlertType.Warning"
+             PreventUserToCloseAlert="true"
+             AutoCloseDelay="TimeSpan.FromSeconds(2)"
+             AnimationType="@AnimateBook.ZoomEntrances.ZoomIn.Fast()"
+             Title="You Must Wait For 2 Sec">
+    <p>
+
+        you cant close this alert
+    </p>
+
+
+</SAPAlertBox>
+
+
+
+
+@code{
+    public SAPAlertBox Alert1;
+    public SAPAlertBox Alert2;
+    public SAPAlertBox Alert3;
+
+    public SAPToastArea ToastArea;
+
+    void CreateToast()
+    {
+        var toast = new SAPToast
+        {
+            Title = "sample text for toast , close after 10 sec",
+            AlertType = SAPAlertType.Info,
+            AutoCloseDelay= TimeSpan.FromSeconds(10)
+        };
+
+        ToastArea.CreateToast(toast);
+    }
+
+        void CreateToast2()
+    {
+        var toast = new SAPToast
+        {
+            Title = "sample text for toast",
+            AlertType = SAPAlertType.Success
+          
+        };
+
+        ToastArea.CreateToast(toast);
+    }
+
+            void CreateToast3()
+    {
+        var toast = new SAPToast
+        {
+            Title = "danger toast",
+            AlertType = SAPAlertType.Danger,
+            AutoCloseDelay = TimeSpan.FromSeconds(3)
+        };
+        ToastArea.CreateToast(toast);
+    }
+
+
+
+}

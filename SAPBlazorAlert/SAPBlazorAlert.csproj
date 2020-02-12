@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RazorLangVersion>3.0</RazorLangVersion>
+    <Authors>Soroush Asadi</Authors>
+    <Company>SAP</Company>
+    <Copyright>MIT By Soroush Asadi</Copyright>
+    <AssemblyVersion>1.9.0</AssemblyVersion>
+    <FileVersion>1.9.0</FileVersion>
+    <Version>1.9.0</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIcon>blazorlogo.png</PackageIcon>
+    <PackageIconUrl />
+    <PackageTags>blazor alert , sweet alert blazor, blazor alert box</PackageTags>
+    <ApplicationIcon>blazorlogo_WuJ_icon.ico</ApplicationIcon>
+    <Description>create alert and toast in blazor app without any js library with great animations.</Description>
+    <PackageProjectUrl>https://github.com/codesoroush/SAPBlazorAlert</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/codesoroush/SAPBlazorAlert</RepositoryUrl>
+    <PackageReleaseNotes>create alert and toast in blazor app without any js library with great animations.</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="blazorlogo.png" />
+    <None Include="blazorlogo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="blazorlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.txt" pack="true" PackagePath="." />
+    <None Include="wwwroot\Svg\danger.svg" />
+    <None Include="wwwroot\Svg\information.svg" />
+    <None Include="wwwroot\Svg\replay.svg" />
+    <None Include="wwwroot\Svg\success.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.1.1" />
+    <PackageReference Include="SAPBlazorAnimate" Version="1.2.6" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="..\..\..\BlazoredAnimateCss\SAPBlazorAnimate\blazorlogo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\..\codesoroush\SAPBlazorAnimate\SAPBlazorAnimate\blazorlogo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

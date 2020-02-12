@@ -1,0 +1,433 @@
+﻿.sapalert-toast-box span {
+    margin: 0 5px;
+}
+
+.sap-toast-area-left {
+    left: 3em;
+}
+.sap-toast-area-right {
+    right: 3em;
+}
+.sap-toast-area-center {
+    right:0;
+    left:0;
+}
+
+svg {
+    width: 25px;
+}
+    .sap-toast-area-center .sapalert-toast-box {
+        margin: 10px auto !important;
+    }
+
+    .sap-toast-row {
+        flex-direction: row;
+    }
+.sap-toast-column {
+    flex-direction: column;
+}
+.sapalert-custom-img
+{
+    max-height:150px;
+}
+.sap-custom-toast-img
+{
+    width:32px;
+}
+.sapalert-toast-container {
+    top: auto;
+    bottom: 3em;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    display: flex;
+    position: fixed;
+    z-index: 1060;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+}
+.sapalert-title {
+    margin: 14px 0;
+}
+.sapalert-toast-box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    width: auto;
+    padding: .825em;
+    overflow-y: hidden;
+    background: #fff;
+    box-shadow: 0 0 0.625em #d9d9d9;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: .3125em;
+    display: flex;
+    margin: 10px;
+}
+
+.sapalert-toast-icon {
+    position: relative;
+    box-sizing: content-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    min-width: 2em;
+    margin: 0 5px;
+    border-radius: 50%;
+    font-family: inherit;
+    line-height: 1.2em;
+    cursor: default;
+}
+
+.sapalert-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index:1;
+    color: #b7b7b7;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+
+.saptoast-close {
+    position: absolute;
+    top: -2px;
+    right: 5px;
+    z-index: 1;
+    color: #b7b7b7;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.svg-box {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+}
+
+.green-stroke {
+    stroke: #7CB342;
+}
+
+.red-stroke {
+    stroke: #FF6245;
+}
+
+.blue-stroke {
+    stroke: #5dc0eb;
+}
+
+.yellow-stroke {
+    stroke: #FFC107;
+}
+
+
+.circular circle.path {
+    stroke-dasharray: 330;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    opacity: 0.4;
+    animation: 0.7s draw-circle ease-out;
+}
+
+/*------- Checkmark ---------*/
+.checkmark {
+    stroke-width: 6.25;
+    stroke-linecap: round;
+    position: absolute;
+    top: 56px;
+    left: 49px;
+    width: 52px;
+    height: 40px;
+}
+
+    .checkmark path {
+        animation: 1s draw-check ease-out;
+    }
+
+@keyframes draw-circle {
+    0% {
+        stroke-dasharray: 0,330;
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+
+    80% {
+        stroke-dasharray: 330,330;
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes draw-check {
+    0% {
+        stroke-dasharray: 49,80;
+        stroke-dashoffset: 48;
+        opacity: 0;
+    }
+
+    50% {
+        stroke-dasharray: 49,80;
+        stroke-dashoffset: 48;
+        opacity: 1;
+    }
+
+    100% {
+        stroke-dasharray: 130,80;
+        stroke-dashoffset: 48;
+    }
+}
+
+/*---------- Cross ----------*/
+
+.cross {
+    stroke-width: 6.25;
+    stroke-linecap: round;
+    position: absolute;
+    top: 54px;
+    left: 54px;
+    width: 40px;
+    height: 40px;
+}
+
+    .cross .first-line {
+        animation: 0.7s draw-first-line ease-out;
+    }
+
+    .cross .second-line {
+        animation: 0.7s draw-second-line ease-out;
+    }
+
+@keyframes draw-first-line {
+    0% {
+        stroke-dasharray: 0,56;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 0,56;
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dasharray: 56,330;
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes draw-second-line {
+    0% {
+        stroke-dasharray: 0,55;
+        stroke-dashoffset: 1;
+    }
+
+    50% {
+        stroke-dasharray: 0,55;
+        stroke-dashoffset: 1;
+    }
+
+    100% {
+        stroke-dasharray: 55,0;
+        stroke-dashoffset: 70;
+    }
+}
+
+.alert-sign {
+    stroke-width: 6.25;
+    stroke-linecap: round;
+    position: absolute;
+    top: 40px;
+    left: 68px;
+    width: 15px;
+    height: 70px;
+    animation: 0.5s alert-sign-bounce cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+    .alert-sign .blue-dot {
+        stroke: none;
+        fill: #5dc0eb;
+    }
+
+    .alert-sign .dot {
+        stroke: none;
+        fill: #FFC107;
+    }
+
+@keyframes alert-sign-bounce {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.sapalert-parent-container {
+    display: -webkit-box;
+    display: flex;
+    position: fixed;
+    z-index: 1059;
+    top: 0;
+    right: 0;
+    background-color: rgba(20,20,20,0.4);
+    bottom: 0;
+    left: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: .625em;
+    overflow-x: hidden;
+    -webkit-transition: background-color .1s;
+    transition: background-color .1s;
+    -webkit-overflow-scrolling: touch;
+}
+
+.sapalert-container {
+    display: -webkit-box;
+    display: flex;
+    position: fixed;
+    z-index: 1060;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    bottom: 0;
+    left: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: .625em;
+    overflow-x: hidden;
+    -webkit-transition: background-color .1s;
+    transition: background-color .1s;
+    -webkit-overflow-scrolling: touch;
+}
+
+.sapalert-box-small {
+    position: relative;
+    box-sizing: border-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 32em;
+    text-align: center;
+    max-width: 100%;
+    padding: 1.25em;
+    border: none;
+    border-radius: .3125em;
+    background: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    margin:auto;
+    z-index:1061;
+}
+
+.sapalert-box-medium {
+    position: relative;
+    box-sizing: border-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 64em;
+    text-align: center;
+    max-width: 100%;
+    padding: 1.25em;
+    border: none;
+    border-radius: .3125em;
+    background: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.sapalert-box-large {
+    position: relative;
+    box-sizing: border-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 64em;
+    text-align: center;
+    max-width: 100%;
+    padding: 1.25em;
+    border: none;
+    border-radius: .3125em;
+    background: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+
+.sapalert-header {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.sapalert-content {
+    z-index: 1;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    color: #545454;
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.sapalert-actions {
+    display: -webkit-box;
+    display: flex;
+    z-index: 1;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    margin: 1.25em auto 0;
+}
+
+.sapalert-footer {
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin: 1.25em 0 0;
+    padding: 1em 0 0;
+    border-top: 1px solid #eee;
+    color: #545454;
+    font-size: 1em;
+}
