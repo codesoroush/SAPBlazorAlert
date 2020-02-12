@@ -10,7 +10,7 @@ Demo :
 ###### Usage
 1. Add SAPBlazorAlert To Your Project
 ```
-PM> Install-Package SAPBlazorAlert -Version 1.9.0
+PM> Install-Package SAPBlazorAlert -Version 1.9.1
 ```
 
 2. Add stylesheets either in your _host.cshtml (server-side blazor) or index.html (client-side blazor)

@@ -364,6 +364,8 @@ svg {
     background: #fff;
     font-family: inherit;
     font-size: 1rem;
+    margin: auto;
+    z-index: 1061;
 }
 
 .sapalert-box-large {
@@ -374,7 +376,7 @@ svg {
     flex-direction: column;
     -webkit-box-pack: center;
     justify-content: center;
-    width: 64em;
+    width: 90%;
     text-align: center;
     max-width: 100%;
     padding: 1.25em;
@@ -383,6 +385,8 @@ svg {
     background: #fff;
     font-family: inherit;
     font-size: 1rem;
+    margin: auto;
+    z-index: 1061;
 }
 
 
